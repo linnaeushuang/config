@@ -1,0 +1,58 @@
+set nocompatible
+set number
+set showmatch
+set autoindent
+set cindent
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set laststatus=2
+set so=7
+syntax on
+set background=dark
+set backspace=2
+set cursorline
+
+
+let mapleader=' '
+map <leader>q :q!<CR>
+map <leader>w :wq<CR>
+
+"jump to windows
+map <leader>h <C-w>h
+map <leader>j <C-w>j
+map <leader>k <C-w>k
+map <leader>l <C-w>l
+
+
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'vim-airline/vim-airline'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'Yggdroot/indentLine'
+Plugin 'davidhalter/jedi-vim'
+
+
+call vundle#end() 
+filetype plugin indent on
+
+
+"about nerdtree
+"map <F2> :NERDTree<CR>
+map <F2> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+
+map <F4> :terminal<CR>
+
+"about tagbar
+map <F3> :TagbarToggle<CR>
+let g:tagbar_width=30
+
+"about indentLine
+let g:indentLine_color_term = 239
+
